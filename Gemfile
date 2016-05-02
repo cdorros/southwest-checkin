@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.2.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
@@ -38,13 +39,6 @@ gem 'roadie-rails' # Inline styles for emails
 # Use Puma as the app server
 gem 'puma'
 
-# Use Mina for deployment
-gem 'mina'
-gem 'mina-puma', :require => false
-gem 'mina-sidekiq', :require => false
-gem 'mina-scp', :require => false
-gem 'mina-newrelic', :require => false
-
 gem 'dotenv-rails'
 
 # Skylight for performance monitoring
@@ -59,6 +53,13 @@ gem 'kaminari'
 # syslog logging with lograge
 # gem 'syslogger', '~> 1.6.0'
 # gem 'lograge', '~> 0.3.1'
+group :production do
+  gem 'rails_12factor'
+
+  # Logging in production
+  # gem 'syslogger', '~> 1.6.0'
+  gem 'lograge', '~> 0.3.1'
+end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
@@ -87,7 +88,16 @@ group :test do
   gem 'json-schema-rspec'
 end
 
-group :developement do
+group :development do
   gem 'guard'
   gem 'guard-rspec'
+
+  # Use Mina for deployment
+  # gem 'mina'
+  # gem 'mina-puma', :require => false
+  # gem 'mina-sidekiq', :require => false
+  # gem 'mina-scp', :require => false
+  # gem 'mina-newrelic', :require => false
+
+  gem 'foreman'
 end
