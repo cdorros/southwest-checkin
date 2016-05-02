@@ -43,7 +43,7 @@ If you are interested in the old version, see the [1.0 branch](https://github.co
 4. Create and seed the database:
 
     ```shell
-    rake db:create db:migrate db:seed
+    rake db:create db:schema:load db:seed
     ```
 
 5. Adding some basic test data for development:
