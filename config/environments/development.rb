@@ -14,7 +14,7 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
 
   config.action_mailer.default_url_options = {
-    host: 'localhost',
+    host: ENV['MAILER_HOST'],
     port: 3000
   }
 
