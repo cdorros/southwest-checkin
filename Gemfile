@@ -58,7 +58,7 @@ group :production do
 
   # Logging in production
   # gem 'syslogger', '~> 1.6.0'
-  gem 'lograge', '~> 0.3.1'
+  #gem 'lograge', '~> 0.3.1'
 end
 
 group :development, :test do
