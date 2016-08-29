@@ -338,7 +338,6 @@ DEPENDENCIES
   json-schema-rspec
   kaminari
   letter_opener
-  lograge (~> 0.3.1)
   newrelic_rpm
   pg
   pry
